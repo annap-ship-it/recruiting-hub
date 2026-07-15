@@ -98,7 +98,7 @@ function DesktopWorkflow({ steps }: { steps: readonly string[] }) {
     "L640.258 634.335";
 
   const ICON = 55;
-  const LABEL_OFFSET = 100; // distance from dot center up to icon top
+  const CLEARANCE = 40; // gap between bottom of label stack and dot
   const LABEL_W = 220;
 
   return (
