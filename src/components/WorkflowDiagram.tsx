@@ -127,7 +127,7 @@ function DesktopWorkflow({ steps }: { steps: readonly string[] }) {
         {steps.slice(0, dots.length).map((step, i) => {
           const p = dots[i];
           const leftPct = (p.x / 1280) * 100;
-          const topPct = ((p.y - LABEL_OFFSET) / 720) * 100;
+          const topPct = ((p.y - CLEARANCE) / 720) * 100;
           return (
             <div
               key={i}
@@ -136,11 +136,11 @@ function DesktopWorkflow({ steps }: { steps: readonly string[] }) {
                 left: `${leftPct}%`,
                 top: `${topPct}%`,
                 width: LABEL_W,
-                transform: "translate(-50%, 0)",
+                transform: "translate(-50%, -100%)",
               }}
             >
               <div style={{ width: ICON, height: ICON }}>{ICONS[i]}</div>
-              <span className="mt-2 text-center text-[15px] font-bold leading-tight text-foreground">
+              <span className="mt-2 text-center text-[15px] font-bold leading-tight text-white">
                 {step}
               </span>
             </div>
